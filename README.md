@@ -12,3 +12,5 @@ You only have to ddrop them in your mod and change any reference to the classes 
 # JSON2Climate
 I've found myself wanting to make a dimension identical to  the overworld with added biomes. Of course, adding biomes cant be done in the default overworld but there is a workaround, copying the dimension generation json in its entirety for a new dimension. The problem is that it has+ 7k biome entries. So, after following Kaupenjoe's dimension tutorial, i've made this little tool that can convert any dimension json biomes list to a java list of Climate settings reddy to be plugged into a custom dimension for 1.20.+ . I'd recommend having the atrocity it generates in a separate class and call it if necessary. Haven't checked yet, but it should work. Just make sure to delete the dimension JSON's HEADER. The first key present on the variable should be "Biomes".
 If people use this i will change it so that it reads directly from a dimension JSON.
+In the folder there is also an already created Climate list of the vanilla overworld generation as generated in https://misode.github.io/dimension/?version=1.20.3
+
