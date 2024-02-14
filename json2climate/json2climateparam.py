@@ -35,7 +35,7 @@ def convert_to_climate_parameter_list(biomes_data):
         climate_parameters_list.append(f"Pair.of({parameters_str}, {biome_constant})")
 
     # Joining all the biome parameter strings into the final Java code format for Climate.ParameterList
-    climate_parameter_list_java_code = f"new Climate.ParameterList<>(List.of(\n    " + ',\n    '.join(climate_parameters_list) + "\n));"
+    climate_parameter_list_java_code = f"new Climate.ParameterList<>(List.of(\n    " + ',\n    '.join(climate_parameters_list) + "\n)));"
 
     return climate_parameter_list_java_code
 
