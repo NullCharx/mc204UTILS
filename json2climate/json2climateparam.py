@@ -31,7 +31,7 @@ def convert_to_climate_parameter_list(biomes_data):
 
         # Constructing the string for this biome's parameters
         parameters_str = f"Climate.parameters({temperature}, {humidity}, {continentalness}, {erosion}, {weirdness}, {depth}, {offset})"
-        biome_constant = f"biomeRegistry.getOrThrow({biome_source}.{biome_name.upper())}"
+        biome_constant = f"biomeRegistry.getOrThrow({biome_source}.{biome_name.upper()})"
         climate_parameters_list.append(f"Pair.of({parameters_str}, {biome_constant})")
 
     # Joining all the biome parameter strings into the final Java code format for Climate.ParameterList
