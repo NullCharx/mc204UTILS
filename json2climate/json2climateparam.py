@@ -2,10 +2,10 @@
 def convert_to_climate_parameter_list(biomes_data):
     # Function to format a single parameter or a range of parameters
     def format_parameter_range(value):
-        if isinstance(value, list):
+        if isinstance(value, list): #If the parameter is a list, the result is a Climate.parameter.span
             min_val, max_val = value
             return f"Climate.Parameter.span({min_val}F, {max_val}F)" if min_val != max_val else f"Climate.Parameter.point({min_val}F)"
-        else:
+        else: #If not Climate.parameter.point
             return f"Climate.Parameter.point({value}F)"
 
     # List to store formatted strings for each biome's parameters
