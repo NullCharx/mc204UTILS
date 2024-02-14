@@ -12,8 +12,10 @@ def convert_to_climate_parameter_list(biomes_data):
 
     # Iterating through each biome entry
     for biome in biomes_data:
-        biome_name = biome["biome"].split(":")[1].upper()  # Extracting biome name and converting to uppercase
-        params = biome["parameters"]
+        namespace, biome_name = biome["biome"].split(":")
+        
+        # Check if biome is from Minecraft or a mod
+        biome_source = "Biomes" if namespace == "minecraft" else "ModBiomes" #Change this to the name of the class that holds our custom biomes
 
         # Formatting each parameter
         temperature = format_parameter_range(*params["temperature"])
@@ -21,7 +23,7 @@ def convert_to_climate_parameter_list(biomes_data):
         continentalness = format_parameter_range(*params["continentalness"])
         erosion = format_parameter_range(*params["erosion"])
         weirdness = format_parameter_range(*params["weirdness"])
-        depth = f"Climate.Parameter.point({params['depth']}F)"  # Depth is always a single value
+        depth = format_parameter_range(*params["depth"])  # Depth is always a single value
         offset = params["offset"]  # Offset is a single float value
 
         # Constructing the string for this biome's parameters
