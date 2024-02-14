@@ -1,0 +1,8 @@
+title: nullchar tools
+email: itsthecharliechar@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Some webbased tools of some of my public repos
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://nullcharx.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ltschar_
+github_username:  nullcharx
