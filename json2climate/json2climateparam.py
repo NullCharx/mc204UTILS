@@ -17,6 +17,8 @@ def convert_to_climate_parameter_list(biomes_data):
         # Check if biome is from Minecraft or a mod
         biome_source = "Biomes" if namespace == "minecraft" else "ModBiomes" #Change this to the name of the class that holds our custom biomes
 
+        params = biome["parameters"]
+
         # Formatting each parameter
         temperature = format_parameter_range(*params["temperature"])
         humidity = format_parameter_range(*params["humidity"])
