@@ -8,6 +8,7 @@ There is an open pull request with the solution -although someone is also hetist
 
 To make it work in the meantime, you have to use the missing class DataPackEntriesProvider, as well as two other classes which need to be patched: RegistrypatchGenerator and RegistrySetBuilder. The class itself and the patches are in the commit, but if you are lazy or unable of applying the patches by yourself, you have the three java classes in this repository.
 You only have to ddrop them in your mod and change any reference to the classes in your worldgen data generators to this classes. It won't affect MC or Forge functionality as it won't override net.minecraft.core classes.
+
 **As of 49.0.30 DatapackBuiltinEntriesProvider has been readded to forge. Just delete your custom folder an point all the dangling referneces back to the mc core library after updating**
 
 # JSON2Climate
